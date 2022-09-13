@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>{{dados[0]?.tituloArtigo}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium" class="body">
+  <ion-row class="imgArtigo">
+    <ion-col size="12">
+      <ion-img src="{{servidorUrl.pegarUrl()+dados[0]?.imgBanner}}"></ion-img>
+    </ion-col>
+  </ion-row>
+  <ion-row class="containerDetalheArtigo">
+    <ion-col size="12" class="contentArtigo">
+      <article class="descArtigo" *ngFor="let partArtigo of txtArtigo">
+        
+        <p><br>{{partArtigo}}<br></p>
+      </article>
+    </ion-col>
+  </ion-row>
+</ion-content>

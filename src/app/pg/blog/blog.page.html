@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Blog</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium" class="body">
+  <ion-row class="artigo" *ngFor="let artigo of artigos">
+    <ion-col size="4">
+      <ion-img src="{{this.servidorUrl.pegarUrl() + artigo.imgCapa}}"></ion-img>
+    </ion-col>
+    <ion-col size="8">
+      <div><h3 style="font-size: 1.2em;">{{artigo.tituloArtigo}}</h3></div>
+      <p>{{artigo.artigo | slice:0:100 }}...</p>
+    </ion-col>
+    <ion-col size="12">
+      <ion-tab-button tab="detalhe-blog/{{artigo.idArtigo}}">
+        <ion-button color="secondary">
+          Ver mais
+        </ion-button>
+      </ion-tab-button>
+    </ion-col>
+  </ion-row>
+  
+</ion-content>

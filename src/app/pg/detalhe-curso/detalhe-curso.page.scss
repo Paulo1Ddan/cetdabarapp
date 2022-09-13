@@ -1,0 +1,31 @@
+.imgCurso{
+    width: 100%;
+    ion-col{
+        padding: 0 !important;
+        width: 100%;
+        ion-img{
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.containerDetalheCurso{
+    min-height: 600px;
+    padding: 3%;
+    .contentCurso{
+        min-height: 600px;
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 6%;
+        font-size: 1.2em;
+        h3{
+            font-weight: 600;
+        }
+    }
+}
+.matricula{
+    ion-button{
+        width: 100%;
+    }
+}

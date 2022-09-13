@@ -1,0 +1,42 @@
+.body{
+    --background: rgb(231, 231, 231);
+}
+
+.formAlterarDados{
+    ion-input {
+        --background: #ffffff;
+        --color: #3b3b3b !important;
+        --placeholder-color: #626262;
+        width: 100%;
+        border-radius: 10px;
+        margin: 10px 0;
+        font-size: 1.2rem;
+        color: #3b3b3b !important;
+    }
+
+    ion-button{
+        margin-top: 4%;
+        font-size: 1.2rem;
+        text-transform: none;
+        font-weight: 550;
+    }
+}
+.formAlteraSenha{
+    ion-input {
+        --background: #ffffff;
+        --color: #3b3b3b !important;
+        --placeholder-color: #626262;
+        width: 100%;
+        border-radius: 10px;
+        margin: 10px 0;
+        font-size: 1.2rem;
+        color: #3b3b3b !important;
+    }
+
+    ion-button{
+        margin-top: 4%;
+        font-size: 1.2rem;
+        text-transform: none;
+        font-weight: 550;
+    }
+}

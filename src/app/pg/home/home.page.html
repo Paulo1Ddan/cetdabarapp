@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar class="topo" color="primary">
+    <ion-title>Dabar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body" color="medium">
+  <!-- User -->
+  <ion-row class="user">
+    <ion-col size="12">
+      <ion-img src="{{img}}"></ion-img>
+    </ion-col>
+    <ion-col size="12">
+      <p class="bemVindo">Seja bem vindo, {{name}}!</p>
+    </ion-col>
+    <ion-col size="12">
+      <p class="txtUser">O que vai fazer?</p>
+    </ion-col>
+  </ion-row>
+
+  <!-- atalhos -->
+  <ion-row class="atalhos">
+    <ion-col size="6">
+      <ion-tab-button tab="cursos">
+        <div class="contentAtalho">
+          <ion-img src="../../../assets/icon/book-solid.svg"></ion-img>
+          <p>Cursos</p>
+        </div>
+      </ion-tab-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-tab-button tab="provas">
+        <div class="contentAtalho">
+          <ion-img src="../../../assets/icon/clipboard-solid.svg"></ion-img>
+          <p>Provas</p>
+        </div>
+      </ion-tab-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-tab-button tab="notas">        
+        <div class="contentAtalho">
+          <ion-img src="../../../assets/icon/note-sticky-solid.svg"></ion-img>
+          <p>Anotações</p>
+        </div>
+      </ion-tab-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-tab-button tab="perfil">
+        <div class="contentAtalho">
+          <ion-img src="../../../assets/icon/user-solid.svg"></ion-img>
+          <p>Perfil</p>
+        </div>
+      </ion-tab-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

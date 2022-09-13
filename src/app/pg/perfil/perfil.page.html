@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body" color="medium">
+  <ion-row class="container-perfil">
+    <ion-img class="imgPerfil" src="{{img}}"></ion-img>
+    <ion-col size="12">
+      <p class="info-perfil">{{name}}</p>
+      <p class="info-perfil info-perfil-last">{{email}}</p>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="container-options">
+    
+    <ion-col size="12">
+      <ion-tab-button tab="alterar-dados">
+        <ion-button style="width: 100%" color="secondary" expand="block">
+          Meus dados
+        </ion-button>
+      </ion-tab-button>
+    </ion-col>
+
+    <ion-col size="12">
+      <ion-tab-button tab="alterar-senha">
+        <ion-button style="width: 100%" color="secondary" expand="block">
+          Alterar senha
+        </ion-button>
+      </ion-tab-button>
+    </ion-col>
+
+    <ion-col size="12">
+      <ion-tab-button tab="matricula-usuario">
+        <ion-button style="width: 100%" color="secondary" expand="block">
+          Metrícula
+        </ion-button>
+      </ion-tab-button>
+    </ion-col>
+
+    <ion-col size="12">
+      <ion-tab-button>
+        <ion-button style="width: 100%;" (click)="logout()" expand="block"
+        color="secondary">
+          Sair
+        </ion-button>
+      </ion-tab-button>
+    </ion-col>
+
+  </ion-row>
+
+</ion-content>

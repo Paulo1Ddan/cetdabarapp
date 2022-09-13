@@ -1,0 +1,22 @@
+ion-content{
+    --padding-end: 2%;
+    --padding-start: 2%;
+    --padding-top: 4%;
+    --padding-bottom: 3%;
+}
+.artigo{
+    background-color: #fff;
+    -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.57); 
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    padding: 2%;
+    margin-bottom: 10px;
+    ion-img{
+        max-width: 120px;
+        height: 120px;
+        object-fit: cover;
+    }
+    ion-button{
+        width: 100%;
+    }
+}

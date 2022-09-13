@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Alterar dados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body" color="medium">
+  <ion-row>
+    <ion-col size="12">
+      <h5>Para alterar os dados, basta substituir os valores dos campos ao qual deseja alterar</h5>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="formAlterarDados">
+    <ion-col size="10" offset="1">
+      <form [formGroup]="alterarDados" (ngSubmit)="alterarDadosUser()">
+        <ion-input type="text" placeholder="Nome" value="string" [(ngModel)]="nome" formControlName="nome"
+          inputmode="nome"></ion-input>
+        <ion-input type="email" placeholder="Email" value={{emailAntigo}} [(ngModel)]="email" formControlName="email"
+          inputmode="email"></ion-input>
+        <ion-input type="text" placeholder="Telefone" value={{telAntigo}} [(ngModel)]="telefone"
+          formControlName="telefone" inputmode="telefone"></ion-input>
+        <ion-input type="date" placeholder="Data Nascimento" value={{dataNascAntigo}} [(ngModel)]="dataNasc"
+          formControlName="dataNasc" inputmode="dataNasc"></ion-input>
+        <ion-button type="submit" class="btnAlterar" color="secondary" expand="block">
+          Alterar
+        </ion-button>
+      </form>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="formAlteraSenha">
+    <ion-col size="10" offset="1">
+      <h3>Alterar senha</h3>
+      <ion-input type="password" placeholder="Senha atual" inputmode="senhaAtual" [(ngModel)]="senhaAtual"></ion-input>
+      <ion-input type="password" placeholder="Senha nova" inputmode="senhaNova" [(ngModel)]="senhaNova"></ion-input>
+      <ion-button expand="block" (click)="alterarSenhaUser()" color="secondary" expand="block">
+        Alterar
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="alterarImg">
+    <ion-col size="10" offset="1">
+      <h3>Alterar Imagem</h3>
+      <label for="imgAltera">Selecionar Imagem</label>
+      <input type="file" (change)="selectedImage($event)" [(ngModel)]="file">
+      <ion-button (click)="alterarImagemUser()" expand="block">
+        Alterar
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>
