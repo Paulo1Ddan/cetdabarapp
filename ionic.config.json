@@ -1,0 +1,7 @@
+{
+  "name": "cetdabarapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
