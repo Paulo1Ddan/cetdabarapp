@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router"
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { map } from "rxjs/operators";
 import { UrlService } from 'src/app/servidor/url.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-detalhe-curso',
@@ -10,6 +11,7 @@ import { UrlService } from 'src/app/servidor/url.service';
   styleUrls: ['./detalhe-curso.page.scss'],
 })
 export class DetalheCursoPage implements OnInit {
+  msg: any;
   dadosCurso: any;//Recebe os dados do banco
   dados: Array<{
     idCurso: any,
@@ -24,7 +26,7 @@ export class DetalheCursoPage implements OnInit {
   idCurso: any;
   descText: any;
 
-  constructor(public dadosUrl: ActivatedRoute, public servidorUrl:UrlService,public http:HttpClient) {
+  constructor(public dadosUrl: ActivatedRoute, public servidorUrl:UrlService,public http:HttpClient, nav: NavController) {
     this.dadosUrl.params.subscribe(paramsId=>{
       this.idCurso = paramsId.idCurso
       this.listaDetalheCurso()
@@ -59,6 +61,38 @@ export class DetalheCursoPage implements OnInit {
         
       console.log(this.dados[0].curso)
     })
+  }
+
+  insertMatricula(){
+    let idUser = localStorage.getItem("idUser")
+    let arrMatricula = {
+      iduser: idUser,
+      idCurso: this.idCurso
+    }
+
+    this.dadosMatricula(arrMatricula).subscribe(
+      data=>{
+        this.msg = data
+        if(this.msg.statusMsg === false){
+          this.servidorUrl.Alerta("Atenção", this.msg.msg)
+        }else{
+          this.servidorUrl.Alerta("Atenção", this.msg.msg)
+          location.href = "/tabs/pg/cursos"
+        }
+      },
+      err=>{
+        console.log(err)
+      }
+    )
+  }
+
+  dadosMatricula(dados){
+    let cabecalho = new HttpHeaders({
+      "Content-Type": "application/x-www-form-urlencoded"
+    })
+    return this.http.post(`${this.servidorUrl.pegarUrl()}matricula.php`, dados,{
+      headers: cabecalho
+    }).pipe(map((res) => {return res}))
   }
 
 }
