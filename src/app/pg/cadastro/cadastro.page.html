@@ -1,0 +1,34 @@
+<ion-content class="body" color="primary">
+
+  <!-- Logo -->
+  <ion-row class="logo">
+    <ion-col size="12">
+      <ion-img src="../../../assets/logo/logo-dabar-verde.svg"></ion-img>
+    </ion-col>
+  </ion-row>
+
+  <!-- Formulario -->
+  <ion-row class="formCadastro">
+    <ion-col size="12">      
+      <form [formGroup]="cadastro" (ngSubmit)="cadUsuario()">
+        <p>Nome</p>
+        <ion-input type="text" autofocus="true" inputmode="nome" formControlName="nome" [(ngModel)]="nome"></ion-input>
+
+        <p>Email</p>
+        <ion-input type="email" inputmode="email" formControlName="email" [(ngModel)]="email"></ion-input>
+
+        <p>Senha</p>
+        <ion-input type="password" inputmode="senha" formControlName="senha" [(ngModel)]="senha"></ion-input>
+
+        <p>Telefone</p>
+        <ion-input type="tel" inputmode="telefone" formControlName="telefone" [(ngModel)]="telefone"></ion-input>
+
+        <p>Data de nasc.</p>
+        <ion-input type="date" inputmode="dataNasc" formControlName="dataNasc" [(ngModel)]="dataNasc"></ion-input>
+        <ion-button type="submit" class="btnCadastro" color="secondary" expand="block">
+          Cadastrar
+        </ion-button>
+      </form>
+    </ion-col>
+  </ion-row>
+</ion-content>

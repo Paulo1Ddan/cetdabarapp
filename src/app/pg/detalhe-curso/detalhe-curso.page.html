@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>{{dados[0]?.curso}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium" class="body">
+  <ion-row class="imgCurso">
+    <ion-col size="12">
+      <ion-img src="{{servidorUrl.pegarUrl()+dados[0]?.imgCurso}}"></ion-img>
+    </ion-col>
+  </ion-row>
+
+  <div class="titledescricao">
+    <p>Descrição:</p>
+    <div class="underline"></div>
+  </div>
+
+  <ion-row class="containerDetalheCurso">
+    <ion-col size="12" class="contentCurso">
+      <p [innerHTML]="descText" class="descCurso">{{dados[0]?.descCurso}}</p>
+      <h3>Detalhes:</h3>
+      <div class="detalhesCurso">
+        <p>Duração: {{dados[0]?.duracaoCurso}}</p>
+        <p>Instrutor: {{dados[0]?.instrutorCurso}}</p>
+        <p>Status: {{dados[0]?.statusCurso}}</p>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row class="matricula">
+    <ion-col size="12">
+      <ion-button expand="block" (click)="insertMatricula()" color="secondary">
+        Matricular
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

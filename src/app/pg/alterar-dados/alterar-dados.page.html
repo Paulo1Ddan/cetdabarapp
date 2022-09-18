@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Alterar dados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body" color="medium">
+  <ion-row>
+    <ion-col size="12">
+      <h5>Para alterar os dados, basta substituir os valores dos campos ao qual deseja alterar</h5>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="formAlterarDados">
+    <ion-col size="10" offset="1">
+      <form [formGroup]="alterarDados" (ngSubmit)="alterarDadosUser()">
+        <ion-input type="text" placeholder="Nome" value="string" [(ngModel)]="nome" formControlName="nome"
+          inputmode="nome"></ion-input>
+        <ion-input type="email" placeholder="Email" value={{emailAntigo}} [(ngModel)]="email" formControlName="email"
+          inputmode="email"></ion-input>
+        <ion-input type="text" placeholder="Telefone" value={{telAntigo}} [(ngModel)]="telefone"
+          formControlName="telefone" inputmode="telefone"></ion-input>
+        <ion-input type="date" placeholder="Data Nascimento" value={{dataNascAntigo}} [(ngModel)]="dataNasc"
+          formControlName="dataNasc" inputmode="dataNasc"></ion-input>
+        <ion-button type="submit" class="btnAlterar" color="secondary" expand="block">
+          Alterar
+        </ion-button>
+      </form>
+    </ion-col>
+  </ion-row>
+</ion-content>

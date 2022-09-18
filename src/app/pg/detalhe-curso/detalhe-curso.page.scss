@@ -1,0 +1,45 @@
+.imgCurso{
+    width: 100%;
+    ion-col{
+        padding: 0 !important;
+        width: 100%;
+        ion-img{
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.titledescricao{
+  padding: 2%;
+  p{
+      font-weight: bold;
+      font-size: 1.1rem;
+  }
+  .underline{
+      width: 50%;
+      height: 2px;
+      background-color: #000;
+  }
+}
+
+.containerDetalheCurso{
+    min-height: 600px;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    .contentCurso{
+        min-height: 600px;
+        background-color: #fff;
+        padding: 6%;
+        font-size: 1.2em;
+        h3{
+            font-weight: 600;
+        }
+    }
+}
+.matricula{
+    ion-button{
+        width: 100%;
+    }
+}

@@ -1,0 +1,38 @@
+<ion-content class="body" color="primary">
+
+  <!-- Logo -->
+  <ion-row class="logo">
+    <ion-col size="12">
+      <ion-img src="../../../assets/logo/logo-dabar-verde.svg"></ion-img>
+    </ion-col>
+  </ion-row>
+
+  <!-- Texto -->
+  <ion-row class="txtLogin">
+    <ion-col size="12">
+      <p>Entre para continuar</p>
+    </ion-col>
+  </ion-row>
+
+  <!-- Formulario -->
+
+  <ion-row class="formLogin">
+    <ion-col size="12">
+      <p>Login</p>
+      <ion-input class="inputLogin" type="text" inputmode="email" [(ngModel)]="email"></ion-input>
+    </ion-col>
+    <ion-col size="12">
+      <p>Senha</p>
+      <ion-input type="password" inputmode="senha" [(ngModel)]="senha"></ion-input>
+    </ion-col>
+
+    <ion-col size="12">
+      <ion-button class="btnEntrar" (click)="Login()" color="secondary" expand="block">
+        Entrar
+      </ion-button>
+    </ion-col>
+    <ion-col size="12">
+      <p>É novo por aqui? <a href="/tabs/pg/cadastro" style="color: #000; font-weight: bold;">Cadastre-se</a></p>
+    </ion-col>
+  </ion-row>
+</ion-content>

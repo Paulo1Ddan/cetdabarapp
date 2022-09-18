@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Alterar Senha</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body" color="medium">
+  <ion-row>
+    <ion-col size="12">
+      <h5>Para alterar a senha, digite primeiramente a senha anterior e depois a atual</h5>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="formAlteraSenha">
+    <ion-col size="10" offset="1">
+      <h3>Alterar senha</h3>
+      <ion-input type="password" placeholder="Senha atual" inputmode="senhaAtual" [(ngModel)]="senhaAtual"></ion-input>
+      <ion-input type="password" placeholder="Senha nova" inputmode="senhaNova" [(ngModel)]="senhaNova"></ion-input>
+      <ion-button expand="block" (click)="alterarSenhaUser()" color="secondary" expand="block">
+        Alterar
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

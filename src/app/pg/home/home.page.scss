@@ -1,0 +1,127 @@
+.topo{
+    ion-title{
+        text-align: center;
+        font-weight: bolder;
+    }
+}
+
+/* Corpo */
+.body{
+    --background: rgb(231, 231, 231);
+}
+
+/* user */
+.user{
+    ion-img{
+        margin-top: 30px !important;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .bemVindo{
+        font-size: 1.4rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    .txtUser{
+        font-size: 1.1rem;
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+.slides{
+  ion-slide{
+    flex-direction: column;
+    ion-img{
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+
+    }
+    p{
+      bottom: 25%;
+      width: 100%;
+      text-align: center;
+      margin: 0 0 10% 0 !important;
+      padding: 10px 0;
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.container-txtoptions{
+  padding: 2%;
+  p{
+      font-weight: bold;
+      font-size: 1.1rem;
+  }
+  .underline{
+      width: 50%;
+      height: 2px;
+      background-color: #000;
+  }
+}
+
+.no-matricula{
+  padding: 3% !important;
+}
+
+/* Matricula */
+
+.matriculas{
+  a{
+    text-decoration: none;
+  }
+  .container-matricula{
+    ion-img{
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+    }
+    p{
+      bottom: 25%;
+      width: 100%;
+      text-align: center;
+      margin: 0 !important;
+      padding: 10px 0;
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+  }
+}
+
+@media screen and (max-width:350px){
+    .contentAtalho{
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        margin: 0 auto;
+        ion-img{
+            width: 50px !important;
+            height: 50px !important;
+            margin: 0 auto;
+        }
+    }
+}
+@media screen and (max-width:300px){
+    .contentAtalho{
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        margin: 0 auto;
+        ion-img{
+            width: 50px !important;
+            height: 50px !important;
+            margin: 0 auto;
+        }
+    }
+}

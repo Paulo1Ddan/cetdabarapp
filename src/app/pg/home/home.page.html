@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar class="topo" color="primary">
+    <ion-title>Dabar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body" color="medium">
+  <!-- Banner Home -->
+  <ion-slides class="slides" pager="true">
+    <ion-slide>
+      <ion-img src="../../../assets/home/slides/slide1.jpg"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img src="../../../assets/home/slides/slide2.jpg"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img src="../../../assets/home/slides/slide3.jpg"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img src="../../../assets/home/slides/slide4.jpg"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img src="../../../assets/home/slides/slide5.jpg"></ion-img>
+    </ion-slide>
+
+  </ion-slides>
+
+  <!-- User -->
+  <ion-row class="user">
+    <ion-col size="12">
+      <ion-img src="{{img}}"></ion-img>
+    </ion-col>
+    <ion-col size="12">
+      <p class="bemVindo">Seja bem vindo, {{name}}!</p>
+    </ion-col>
+  </ion-row>
+
+  <!-- Matriculas -->
+  <div class="container-txtoptions">
+
+    <p>Matriculas</p>
+    <div class="underline"></div>
+  </div>
+
+  <section *ngIf="numMatriculas > 0; else falseCondition">
+
+    <div class="matriculas" *ngFor="let data of dadosMatricula">
+      <a style="width: 100%" href="/tabs/pg/detalhe-curso/{{data.idCurso}}">
+        <ion-row class="container-matricula">
+          <ion-col size="12">
+            <ion-img src="{{this.servidorUrl.pegarUrl() + data.imgCurso}}"></ion-img>
+            <p>{{data.curso}} - {{data.statusMatricula}}</p>
+          </ion-col>
+        </ion-row>
+      </a>
+    </div>
+  </section>
+  <ng-template #falseCondition>
+    <div class="no-matricula">
+      <p>Você não possui nenhuma matricula</p>
+    </div>
+  </ng-template>
+
+  <!-- Destaque Blog -->
+  <div class="container-txtoptions">
+
+    <p>Blog</p>
+    <div class="underline"></div>
+  </div>
+
+  <ion-slides class="slides"  pager="true">
+    <ion-slide *ngFor="let datablog of dadosDestaque">
+      <a href="/tabs/pg/detalhe-blog/{{datablog.idArtigo}}">
+        <ion-img src="{{this.servidorUrl.pegarUrl() + datablog.imgBanner}}"></ion-img>
+        <p>{{datablog.tituloArtigo}}</p>
+      </a>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

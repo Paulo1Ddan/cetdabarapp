@@ -1,0 +1,84 @@
+.header-md::after {
+    width: 0;
+}
+.header-ios ion-toolbar:last-of-type {
+   --border-width: 0 0 0.55px;
+}
+
+.body{
+    --background: rgb(231, 231, 231);
+}
+
+.container-perfil{
+    min-height: 35%;
+    background-color: #B7C894;
+    box-sizing: border-box;
+}
+
+.imgPerfil{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.imgPerfil{
+    margin-top: 3%;
+    width: 120px;
+    height: 120px;
+    margin-top: 5%;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.info-perfil{
+    margin: 0;
+    padding: 2% ;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container-txtoptions{
+  padding: 2%;
+  p{
+      font-weight: bold;
+      font-size: 1.1rem;
+  }
+  .underline{
+      width: 50%;
+      height: 2px;
+      background-color: #000;
+  }
+}
+
+.btnPerfil ion-tab-button{
+    width: 100%;
+    ion-button{
+        width: 100%;
+    }
+}
+
+/* Matricula */
+
+.matriculas{
+  a{
+    text-decoration: none;
+  }
+  .container-matricula{
+    ion-img{
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+    }
+    p{
+      bottom: 25%;
+      width: 100%;
+      text-align: center;
+      margin: 0 !important;
+      padding: 10px 0;
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+  }
+}
