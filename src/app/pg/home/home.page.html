@@ -43,13 +43,12 @@
   </div>
 
   <section *ngIf="numMatriculas > 0; else falseCondition">
-
     <div class="matriculas" *ngFor="let data of dadosMatricula">
-      <a style="width: 100%" href="/tabs/pg/detalhe-curso/{{data.idCurso}}">
+      <a style="width: 100%" href="/tabs/pg/matricula/{{data.idMatriculado}}">
         <ion-row class="container-matricula">
           <ion-col size="12">
             <ion-img src="{{this.servidorUrl.pegarUrl() + data.imgCurso}}"></ion-img>
-            <p>{{data.curso}} - {{data.statusMatricula}}</p>
+            <p>{{data.curso}} - {{data.statusMatriculado}}</p>
           </ion-col>
         </ion-row>
       </a>

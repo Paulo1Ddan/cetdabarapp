@@ -1,0 +1,22 @@
+.container-txtoptions{
+  padding: 2%;
+  p{
+      font-weight: bold;
+      font-size: 1.1rem;
+  }
+  .underline{
+      width: 50%;
+      height: 2px;
+      background-color: #000;
+  }
+}
+
+.container-detalhes{
+  background: #fff;
+  p{
+    font-size: 1.1rem;
+    span{
+      font-weight: bold;
+    }
+  }
+}

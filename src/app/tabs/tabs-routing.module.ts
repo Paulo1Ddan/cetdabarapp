@@ -51,6 +51,10 @@ const routes: Routes = [
         path: 'alterar-senha',
         loadChildren: () => import('../pg/alterar-senha/alterar-senha.module').then( m => m.AlterarSenhaPageModule)
       },
+      {
+        path: 'matricula/:idMatricula',
+        loadChildren: () => import('../pg/matricula/matricula.module').then( m => m.MatriculaPageModule)
+      },
 
       {
         path: '',

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>{{dados[0]?.curso}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium" class="body">
+  <div class="container-txtoptions">
+
+    <p>Dados da Matricula</p>
+    <div class="underline"></div>
+  </div>
+
+  <!-- Dados da matricula -->
+  <ion-row class="container-detalhes">
+    <ion-col size="12">
+      <p><span>Usuario: </span>{{dados[0]?.nomeUsuario}}</p>
+      <p><span>Email: </span>{{dados[0]?.emailUsuario}}</p>
+      <p><span>Curso: </span>{{dados[0]?.curso}}</p>
+      <p><span>Instrutor: </span>{{dados[0]?.instrutorCurso}}</p>
+      <p><span>Turma: </span>{{dados[0]?.nomeTurma}}</p>
+      <p><span>Status da Turma: </span>{{dados[0]?.statusTurma}}</p>
+      <p><span>Andamento: </span>{{dados[0]?.andamentoTurma}}</p>
+      <p><span>Duração do curso: </span>{{dados[0]?.duracaoCurso}}</p>
+      <p><span>Status da matricula: </span>{{dados[0]?.statusMatricula}}</p>
+      <p><span>Data da matricula: </span>{{dados[0]?.dataMatricula}}</p>
+    </ion-col>
+  </ion-row>
+</ion-content>

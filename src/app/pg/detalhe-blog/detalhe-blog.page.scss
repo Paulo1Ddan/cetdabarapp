@@ -10,13 +10,27 @@
         }
     }
 }
+
+.titledescricao{
+  padding: 2%;
+  p{
+      font-weight: bold;
+      font-size: 1.1rem;
+  }
+  .underline{
+      width: 50%;
+      height: 2px;
+      background-color: #000;
+  }
+}
+
 .containerDetalheArtigo{
     min-height: 600px;
-    padding: 3%;
     .contentArtigo{
         min-height: 600px;
+
+        margin-top: 5%;
         background-color: #fff;
-        border-radius: 20px;
         padding: 0 6%;
         font-size: 1.4em;
         h3{

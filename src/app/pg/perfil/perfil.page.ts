@@ -68,21 +68,22 @@ export class PerfilPage implements OnInit {
   }
 
   trazerMatricula(){
-    this.http.get(this.servidorUrl.pegarUrl() + "trazerMatricula.php?iduser="+this.id).pipe(map(res=> res)).subscribe(data =>{
+    this.http.get(this.servidorUrl.pegarUrl() + "trazerMatriculado.php?iduser="+this.id).pipe(map(res=> res)).subscribe(data =>{
       this.dadosMatricula = data
 
       this.numMatriculas = this.dadosMatricula.length;
 
       for(let i = 0; i < this.dadosMatricula.length; i++){
-        switch(this.dadosMatricula[i].statusMatricula){
+        switch(this.dadosMatricula[i].statusMatriculado){
           case 1:
-            this.dadosMatricula[i].statusMatricula = 'Aprovada'
+            this.dadosMatricula[i].statusMatriculado = 'Ativo'
           break;
           case 2:
-            this.dadosMatricula[i].statusMatricula = 'Pendente'
+            this.dadosMatricula[i].statusMatriculado = 'Finalizado'
           break;
         }
       }
+      console.log(this.dadosMatricula);
     })
   }
 
